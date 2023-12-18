@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.main-image{
+    background-image: url(Images/Rectangle\ 2.png);
+    height: 666px;
+    width: 32.4%;
+    background-repeat: no-repeat;  
+    padding: 84px 32px;  
+}
+.more{
+    background-color: #222831 ;
+    height: 623px;
+    width: 35%;
+    border-radius: 25px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #343D4B;
+    color: white;
+}
+.container img{
+    height: 20px;
+}
+.location{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#day{
+    margin: 10px 0;
+}
+.location{
+    margin-top: 10px;
+}
+.temp{
+    position: absolute;
+    bottom: 150px;
+}
+#weather-img{
+    margin-bottom: 10px;
+}
+#temperature{
+    margin-bottom: 10px;
+}
