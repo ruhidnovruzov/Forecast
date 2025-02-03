@@ -1,53 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
-.main-image{
-    background-image: url(Images/Rectangle\ 2.png);
-    height: 666px;
-    width: 32.4%;
-    background-repeat: no-repeat;  
-    padding: 84px 32px;  
+
+.main-image {
+  background-image: url(Images/Rectangle\ 2.png);
+  height: 666px;
+  width: 32.4%;
+  background-repeat: no-repeat;
+  padding: 84px 32px;
 }
-.more{
-    background-color: #222831 ;
-    height: 623px;
-    width: 35%;
-    border-radius: 25px;
+
+.more {
+  background-color: #222831;
+  height: 623px;
+  width: 35%;
+  border-radius: 25px;
 }
-.container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #343D4B;
-    color: white;
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #343d4b;
+  color: white;
+  flex-wrap: wrap; /* Ekran kiçildikdə elementlərin uyğunlaşmasını təmin edir */
 }
-.container img{
-    height: 20px;
+
+.container img {
+  height: 20px;
 }
-.location{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-#day{
-    margin: 10px 0;
+
+#day {
+  margin: 10px 0;
 }
-.location{
-    margin-top: 10px;
+
+.location {
+  margin-top: 10px;
 }
-.temp{
-    position: absolute;
-    bottom: 150px;
+
+.temp {
+  position: absolute;
+  bottom: 150px;
 }
-#weather-img{
-    margin-bottom: 10px;
+
+#weather-img {
+  margin-bottom: 10px;
 }
-#temperature{
-    margin-bottom: 10px;
+
+#temperature {
+  margin-bottom: 10px;
+}
+
+/* Responsiv dizayn üçün media sorğuları */
+@media (max-width: 1024px) {
+  .main-image, .more {
+    width: 100%; /* 1024px-dən kiçik ekranlarda elementlərin tam genişliyə yayılması */
+    height: auto; /* Avtomatik hündürlük */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px; /* Aralarına boşluq əlavə edin */
+  }
+
+  .temp {
+    position: relative; /* Mətnin nisbətən yerləşdirilməsi */
+    bottom: auto;
+    margin-top: 20px; /* Əlavə yuxarı boşluq */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 768px-dən kiçik ekranlarda elementlərin sütun formasında uyğunlaşması */
+    height: auto;
+    padding: 20px;
+  }
+
+  .main-image, .more {
+    padding: 15px;
+  }
+
+  #temperature {
+    font-size: 36px; /* Temperaturun şrift ölçüsünün kiçildilməsi */
+  }
+
+  #condition {
+    font-size: 24px; /* Şərtin şrift ölçüsünün kiçildilməsi */
+  }
 }
